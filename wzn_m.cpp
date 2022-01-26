@@ -23,21 +23,21 @@ int main() {
     int n, m;
     cin >> n >> m;
 
-    vector<int> vert[n + 1];
+    vector<int> edges[n + 1];
 
     int v1, v2, w;
     for (int i = 0; i < m; ++i) {
         cin >> v1 >> v2 >> w;
-        vert[v1].push_back(w);
-        vert[v2].push_back(w);
+        edges[v1].push_back(w);
+        edges[v2].push_back(w);
     }
 
     uint64_t res = 0;
     for (int i = 1; i <= n; ++i) {
-        sort(vert[i].begin(), vert[i].end());
+        sort(edges[i].begin(), edges[i].end());
         int number_of_smaller = 0;
-        for (int j = 1; j < vert[i].size(); ++j) {
-            if (vert[i][j] > vert[i][j - 1]) {
+        for (int j = 1; j < edges[i].size(); ++j) {
+            if (edges[i][j] > edges[i][j - 1]) {
                 res += j;
                 number_of_smaller = j;
             }
