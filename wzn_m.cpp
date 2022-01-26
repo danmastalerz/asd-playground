@@ -12,6 +12,7 @@
 // Na posortowanej tablicy mozemy to zrobic liniowo, i po prostu zwiekszamy koncowy wynik.
 
 // Zlozonosc tego to na oko O(n + m * log(m)).
+// P.S. pamietaj ze wynik musi byc uint64_t xd, bo z 5 minut stracilem na zastanawianie sie dlaczego wyszla liczba ujemna.
 
 using namespace std;
 
